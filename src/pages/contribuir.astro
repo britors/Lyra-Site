@@ -1,0 +1,168 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+// TODO(link-real): substituir pelos links reais do repositório e templates de issue antes do lançamento.
+const repositoryUrl = 'https://github.com/britors/Lyra-Site';
+const issueUrl = `${repositoryUrl}/issues/new`;
+const pullRequestUrl = `${repositoryUrl}/pulls`;
+
+const contributionPaths = [
+  {
+    title: 'Reportar problemas',
+    description:
+      'Avise quando encontrar texto quebrado, link incorreto, informação desatualizada ou comportamento estranho no site.',
+  },
+  {
+    title: 'Melhorar conteudo',
+    description:
+      'Ajuste explicações, revise páginas, sugira exemplos e deixe a comunicação mais clara para quem está chegando.',
+  },
+  {
+    title: 'Contribuir com codigo',
+    description:
+      'Corrija bugs, refine componentes Astro, melhore acessibilidade e mantenha a experiência responsiva.',
+  },
+  {
+    title: 'Revisar identidade',
+    description:
+      'Ajude a alinhar imagens, screenshots, cores e materiais de marca quando os assets finais estiverem disponíveis.',
+  },
+];
+
+const checklist = [
+  'Abra uma issue descrevendo a mudança antes de trabalhos grandes.',
+  'Mantenha o escopo pequeno e focado em uma melhoria por pull request.',
+  'Rode npm run build antes de enviar mudancas no site.',
+  'Use texto em português claro e evite jargões desnecessários.',
+];
+---
+
+<BaseLayout
+  title="Contribuir"
+  description="Como contribuir com o site do Lyra OS: reporte problemas, envie melhorias de conteúdo, código e revisões de identidade."
+>
+  <section class="section">
+    <div class="container contribute-hero">
+      <div>
+        <p class="eyebrow">Projeto aberto</p>
+        <h1>Contribua com o Lyra OS</h1>
+        <p class="lead">
+          O site do Lyra OS aceita contribuições em conteúdo, revisão, design e código. Comece por uma melhoria pequena, descreva o motivo e envie uma proposta clara.
+        </p>
+      </div>
+      <div class="actions" aria-label="Acoes de contribuicao">
+        <a class="btn btn--primary" href={issueUrl}>Abrir issue</a>
+        <a class="btn btn--secondary" href={pullRequestUrl}>Ver pull requests</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="container">
+      <h2>Formas de ajudar</h2>
+      <div class="path-grid">
+        {contributionPaths.map((path) => (
+          <article class="card path-card">
+            <h3>{path.title}</h3>
+            <p>{path.description}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container contribution-flow">
+      <div>
+        <h2>Antes de enviar</h2>
+        <p class="muted">
+          Uma boa contribuição explica o problema, mostra a solução e facilita a revisão.
+        </p>
+      </div>
+      <ol class="checklist">
+        {checklist.map((item) => (
+          <li>{item}</li>
+        ))}
+      </ol>
+      <div class="card license-card">
+        <h3>Licenca</h3>
+        <p>
+          Ao contribuir, você concorda que sua contribuição será distribuída sob a licença MIT do projeto.
+        </p>
+        <a href={repositoryUrl}>Ver repositorio</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .contribute-hero,
+  .contribution-flow {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 2rem;
+    align-items: start;
+  }
+
+  .eyebrow {
+    color: var(--lyra-neon);
+    font-weight: 700;
+    margin: 0 0 0.75rem;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+  }
+
+  .lead,
+  .muted,
+  .path-card p,
+  .license-card p {
+    color: var(--lyra-star-dim);
+  }
+
+  .lead {
+    max-width: 46rem;
+    margin-bottom: 0;
+  }
+
+  .actions {
+    display: flex;
+    gap: 0.85rem;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  .path-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+  }
+
+  .checklist {
+    margin: 0;
+    color: var(--lyra-star-dim);
+  }
+
+  .checklist li + li {
+    margin-top: 0.75rem;
+  }
+
+  .license-card {
+    max-width: 22rem;
+  }
+
+  @media (max-width: 760px) {
+    .contribute-hero,
+    .contribution-flow {
+      grid-template-columns: 1fr;
+    }
+
+    .actions {
+      justify-content: flex-start;
+    }
+
+    .license-card {
+      max-width: none;
+    }
+  }
+</style>
