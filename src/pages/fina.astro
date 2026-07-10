@@ -1,0 +1,113 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const benefits = [
+  'Visão clara de tudo que entra e sai do seu bolso.',
+  'Alertas e previsão de saldo, para você nunca ser pego de surpresa.',
+  'Funciona sem depender de banco ou nuvem de terceiros.',
+];
+---
+
+<BaseLayout
+  title="Fina — suas finanças, no seu controle"
+  description="Fina é o app de finanças pessoais pré-instalado no Lyra OS: visão clara do seu dinheiro, alertas de saldo e nada de nuvem de terceiros."
+>
+  <section class="section">
+    <div class="container">
+      <p class="eyebrow">App de finanças pessoais</p>
+      <h1>Fina — suas finanças, no seu controle</h1>
+
+      <div class="fina-layout">
+        <ul class="benefits">
+          {benefits.map((benefit) => (
+            <li>{benefit}</li>
+          ))}
+        </ul>
+        <img
+          class="app-shot"
+          src="/images/fina.png"
+          alt="Dashboard do Fina com visão geral financeira"
+          loading="lazy"
+          decoding="async"
+        />
+      </div>
+
+      <div class="mascot-note">
+        <img
+          class="mascot-thumb"
+          src="/images/fina.png"
+          alt="Identidade visual do Fina"
+          loading="lazy"
+          decoding="async"
+        />
+        <p>
+          Esse é o Fino, a capivara que representa o Fina. Ele é do app de
+          finanças — diferente do Lyro, que é a mascote do sistema como um
+          todo.
+        </p>
+      </div>
+
+      <a class="btn btn--primary" href="/download">Vem pré-instalado no Lyra OS</a>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .eyebrow {
+    color: var(--lyra-neon);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .fina-layout {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 2.5rem;
+    align-items: center;
+    margin: 2rem 0;
+  }
+
+  .benefits {
+    padding-left: 1.25rem;
+    color: var(--lyra-star-dim);
+  }
+
+  .benefits li {
+    margin-bottom: 0.75rem;
+  }
+
+  .app-shot {
+    width: 100%;
+    border-radius: var(--radius-card);
+    border: 1px solid var(--lyra-border);
+    box-shadow: 0 12px 32px rgba(10, 12, 30, 0.55);
+  }
+
+  .mascot-note {
+    display: grid;
+    grid-template-columns: 6rem 1fr;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 2rem;
+    color: var(--lyra-star-dim);
+    font-size: 0.9rem;
+  }
+
+  .mascot-thumb {
+    width: 6rem;
+    height: 6rem;
+    object-fit: cover;
+    object-position: left center;
+    border-radius: 50%;
+    border: 1px solid var(--lyra-border);
+  }
+
+  @media (max-width: 800px) {
+    .fina-layout {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

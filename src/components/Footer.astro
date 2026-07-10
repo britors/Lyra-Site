@@ -1,0 +1,46 @@
+---
+const year = new Date().getFullYear();
+---
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <p>&copy; {year} Lyra OS. Software livre, feito em português.</p>
+    <p class="footer__meta">
+      Este site não usa cookies nem scripts de terceiros. Nenhum dado é coletado sem ação explícita sua.
+    </p>
+    <nav aria-label="Links do rodapé">
+      <ul class="footer__links">
+        <li><a href="/comunidade">Comunidade</a></li>
+        <li><a href="/download">Download</a></li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    border-top: 1px solid var(--lyra-border);
+    padding: 2.5rem 0;
+    margin-top: 3rem;
+  }
+
+  .footer__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    color: var(--lyra-star-dim);
+    font-size: 0.9rem;
+  }
+
+  .footer__links {
+    list-style: none;
+    display: flex;
+    gap: 1.25rem;
+    margin: 0;
+    padding: 0;
+  }
+
+  .footer__links a {
+    color: var(--lyra-star-dim);
+  }
+</style>

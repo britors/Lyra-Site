@@ -1,0 +1,40 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  href: string;
+  active?: boolean;
+}
+
+const { title, description, href, active = false } = Astro.props;
+---
+
+<a class:list={['card', 'product-card', { 'card--active': active }]} href={href}>
+  <h3>{title}</h3>
+  <p>{description}</p>
+  <span class="product-card__link">Saiba mais &rarr;</span>
+</a>
+
+<style>
+  .product-card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s ease, border-color 0.15s ease;
+  }
+
+  .product-card:hover {
+    transform: translateY(-2px);
+  }
+
+  .product-card p {
+    color: var(--lyra-star-dim);
+    margin-bottom: 1rem;
+  }
+
+  .product-card__link {
+    color: var(--lyra-neon);
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+</style>

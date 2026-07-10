@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3b5bdb"/>
+      <stop offset="1" stop-color="#7c3aed"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="#0d0d1f"/>
+  <circle cx="220" cy="315" r="150" fill="url(#g)"/>
+  <circle cx="220" cy="315" r="45" fill="#e8ecff"/>
+  <text x="440" y="290" font-family="system-ui, sans-serif" font-size="72" fill="#e8ecff" font-weight="700">Lyra OS</text>
+  <text x="440" y="350" font-family="system-ui, sans-serif" font-size="32" fill="#a78bfa">Harmonia. Performance. Liberdade.</text>
+</svg>

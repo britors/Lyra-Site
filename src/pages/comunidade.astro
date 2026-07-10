@@ -1,0 +1,71 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+// TODO(link-real): substituir pelos links reais antes do lançamento.
+const channels = [
+  {
+    title: 'GitHub Discussions',
+    description: 'Tire dúvidas, sugira ideias e acompanhe o desenvolvimento do Lyra OS.',
+    href: 'https://github.com/lyra-os/lyra-os/discussions',
+  },
+  {
+    title: 'Telegram (pt-BR)',
+    description: 'Converse em tempo real com outras pessoas usando o Lyra OS.',
+    href: 'https://t.me/lyraos',
+  },
+];
+
+// TODO(link-real): mesmo destino do botão "Gerar relatório de problema" do Vega.
+const reportUrl = 'https://github.com/lyra-os/lyra-os/issues/new';
+---
+
+<BaseLayout
+  title="Comunidade"
+  description="Fale com a comunidade do Lyra OS: GitHub Discussions, grupo no Telegram e como reportar um problema."
+>
+  <section class="section">
+    <div class="container">
+      <h1>Comunidade</h1>
+      <p class="lead">O Lyra OS é feito com quem usa. Escolha por onde prefere participar.</p>
+
+      <div class="channel-grid">
+        {channels.map((channel) => (
+          <a class="card channel-card" href={channel.href}>
+            <h3>{channel.title}</h3>
+            <p>{channel.description}</p>
+          </a>
+        ))}
+      </div>
+
+      <div class="card report-card">
+        <h3>Encontrou um problema?</h3>
+        <p>Use o mesmo canal do botão "Gerar relatório de problema" do Vega para nos avisar.</p>
+        <a class="btn btn--primary" href={reportUrl}>Reportar problema</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .lead {
+    color: var(--lyra-star-dim);
+    margin-bottom: 2rem;
+  }
+
+  .channel-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .channel-card {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .channel-card p,
+  .report-card p {
+    color: var(--lyra-star-dim);
+  }
+</style>

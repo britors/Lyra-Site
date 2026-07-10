@@ -1,0 +1,61 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import ProductCard from '../components/ProductCard.astro';
+
+const summaryBlocks = [
+  {
+    id: 'vega',
+    title: 'Vega, o centro de controle',
+    description:
+      'Instale programas, troque drivers e cuide do sistema inteiro numa tela só. Sem terminal.',
+    href: '/vega',
+  },
+  {
+    id: 'restauracao',
+    title: 'Errou? Volte no tempo',
+    description:
+      'Pontos de restauração automáticos e um Botão do Pânico para desfazer qualquer estrago em segundos.',
+    href: '/vega#restauracao',
+  },
+  {
+    id: 'atelier',
+    title: 'Escritório e finanças, prontos',
+    description:
+      'Prosa para seus textos e Fina para seu dinheiro — em português, desde o primeiro boot.',
+    href: '/prosa',
+  },
+  {
+    id: 'gnome',
+    title: 'GNOME puro e polido',
+    description:
+      'A área de trabalho do jeito que o GNOME já é bom, sem invenção por cima.',
+    href: '/lyro',
+  },
+];
+---
+
+<BaseLayout
+  title="Lyra OS — Linux simples, com poder de verdade"
+  description="Lyra OS é um sistema Linux baseado em Arch, com GNOME puro e o Vega, um centro de controle que nenhuma outra distro tem."
+>
+  <Hero />
+
+  <section class="section">
+    <div class="container">
+      <div class="summary-grid">
+        {summaryBlocks.map((block) => (
+          <ProductCard title={block.title} description={block.description} href={block.href} />
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .summary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap: 1.5rem;
+  }
+</style>

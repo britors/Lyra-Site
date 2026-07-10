@@ -1,0 +1,65 @@
+---
+/*
+  TODO(release-sync): os comandos de verificação abaixo são placeholders.
+  Substituir pelo texto exato de PROMPT-LYRA-RELEASE-SHELIAK.md §2.2
+  antes do lançamento, sem parafrasear.
+*/
+interface Props {
+  isoName: string;
+  isoUrl: string;
+  sha256Url: string;
+  sizeLabel: string;
+}
+
+const { isoName, isoUrl, sha256Url, sizeLabel } = Astro.props;
+---
+
+<div class="download-block card">
+  <div class="download-block__header">
+    <h3>{isoName}</h3>
+    <span class="download-block__size">{sizeLabel}</span>
+  </div>
+  <a class="btn btn--primary" href={isoUrl}>Baixar ISO</a>
+  <details class="download-block__verify">
+    <summary>Como verificar a integridade do arquivo</summary>
+    <p>Baixe também a assinatura e confira o SHA-256 antes de gravar a ISO:</p>
+    <pre><code>sha256sum -c {isoName}.sha256
+gpg --verify {isoName}.sha256.sig {isoName}.sha256</code></pre>
+    <p><a href={sha256Url}>Baixar arquivo de verificação SHA-256</a></p>
+  </details>
+</div>
+
+<style>
+  .download-block__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .download-block__size {
+    color: var(--lyra-star-dim);
+    font-size: 0.9rem;
+  }
+
+  .download-block__verify {
+    margin-top: 1.5rem;
+    color: var(--lyra-star-dim);
+    font-size: 0.9rem;
+  }
+
+  .download-block__verify summary {
+    cursor: pointer;
+    color: var(--lyra-neon);
+    font-weight: 600;
+  }
+
+  .download-block__verify pre {
+    background: var(--lyra-night);
+    border: 1px solid var(--lyra-border);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    overflow-x: auto;
+  }
+</style>

@@ -1,0 +1,87 @@
+---
+---
+
+<section class="hero stars-bg">
+  <div class="container hero__inner">
+    <div class="hero__text">
+      <h1>Lyra OS</h1>
+      <p class="hero__slogan gradient-text">Harmonia. Performance. Liberdade.</p>
+      <p class="hero__lead">
+        Um sistema Linux baseado em Arch, com GNOME puro e polido — feito para quem
+        quer simplicidade no dia a dia sem abrir mão de poder por baixo do capô.
+      </p>
+      <div class="hero__ctas">
+        <a class="btn btn--primary" href="/download">Baixar o Lyra OS</a>
+        <a class="btn btn--secondary" href="/vega">Conheça o Vega</a>
+      </div>
+    </div>
+    <div class="hero__art">
+      <img
+        src="/images/lyra.png"
+        alt="Lyro, mascote do Lyra OS"
+        loading="eager"
+        decoding="async"
+      />
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    padding: 5rem 0;
+  }
+
+  .hero__inner {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 3rem;
+    align-items: center;
+  }
+
+  .hero h1 {
+    font-size: 3.25rem;
+  }
+
+  .hero__slogan {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 1.25rem;
+  }
+
+  .hero__lead {
+    font-size: 1.1rem;
+    color: var(--lyra-star-dim);
+    max-width: 40ch;
+    margin-bottom: 2rem;
+  }
+
+  .hero__ctas {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .hero__art img {
+    width: 100%;
+    max-width: 34rem;
+    border-radius: var(--radius-card);
+    border: 1px solid var(--lyra-border);
+    box-shadow: 0 12px 36px rgba(10, 12, 30, 0.55);
+    margin: 0 auto;
+    display: block;
+  }
+
+  @media (max-width: 800px) {
+    .hero__inner {
+      grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+    }
+
+    .hero__art {
+      order: -1;
+    }
+  }
+</style>

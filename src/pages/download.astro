@@ -1,0 +1,114 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import DownloadBlock from '../components/DownloadBlock.astro';
+
+// TODO(release-sync): substituir por dados reais do release mais recente.
+const isoName = 'lyra-os-2026.07-x86_64';
+const isoUrl = `/downloads/${isoName}.iso`;
+const sha256Url = `/downloads/${isoName}.sha256`;
+const torrentUrl = `/downloads/${isoName}.torrent`;
+
+const requirements = [
+  { label: 'Processador', value: 'x86_64 (64 bits)' },
+  { label: 'Memória RAM', value: '4 GB (recomendado 8 GB)' },
+  { label: 'Espaço em disco', value: '20 GB livres' },
+];
+---
+
+<BaseLayout
+  title="Download"
+  description="Baixe o Lyra OS, confira a integridade do arquivo e veja os requisitos mínimos para instalar."
+>
+  <section class="section">
+    <div class="container">
+      <h1>Download</h1>
+      <p class="lead">
+        Baixe a versão estável mais recente do Lyra OS. A ISO é atualizada
+        mensalmente, então recomendamos sempre a mais recente disponível
+        aqui.
+      </p>
+
+      <div class="preview-grid">
+        <figure class="preview-card card">
+          <img src="/images/tela-principal.png" alt="Tela principal do Lyra OS" loading="lazy" decoding="async" />
+          <figcaption>Área de trabalho pronta para uso no primeiro boot.</figcaption>
+        </figure>
+        <figure class="preview-card card">
+          <img src="/images/calamares.png" alt="Instalador do Lyra OS" loading="lazy" decoding="async" />
+          <figcaption>Instalador em português com fluxo simplificado.</figcaption>
+        </figure>
+        <figure class="preview-card card">
+          <img src="/images/lyraterminal.png" alt="Terminal do Lyra OS com fastfetch" loading="lazy" decoding="async" />
+          <figcaption>Base Arch com terminal pronto para quem curte linha de comando.</figcaption>
+        </figure>
+      </div>
+
+      <DownloadBlock
+        isoName={isoName}
+        isoUrl={isoUrl}
+        sha256Url={sha256Url}
+        sizeLabel="TODO: tamanho do arquivo"
+      />
+
+      <p class="torrent-note">
+        Prefere torrent? <a href={torrentUrl}>Baixe pelo torrent</a> (mesmo
+        arquivo, mesma verificação SHA-256).
+      </p>
+
+      <h2>Requisitos mínimos</h2>
+      <ul class="requirements">
+        {requirements.map((req) => (
+          <li><strong>{req.label}:</strong> {req.value}</li>
+        ))}
+      </ul>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .lead {
+    color: var(--lyra-star-dim);
+    max-width: 60ch;
+    margin-bottom: 2rem;
+  }
+
+  .torrent-note {
+    color: var(--lyra-star-dim);
+    font-size: 0.9rem;
+    margin: 1.5rem 0 3rem;
+  }
+
+  .preview-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .preview-card {
+    margin: 0;
+    padding: 1rem;
+  }
+
+  .preview-card img {
+    width: 100%;
+    border-radius: 0.75rem;
+    border: 1px solid var(--lyra-border);
+    margin-bottom: 0.75rem;
+  }
+
+  .preview-card figcaption {
+    color: var(--lyra-star-dim);
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+
+  .requirements {
+    color: var(--lyra-star-dim);
+    padding-left: 1.25rem;
+  }
+
+  .requirements li {
+    margin-bottom: 0.5rem;
+  }
+</style>

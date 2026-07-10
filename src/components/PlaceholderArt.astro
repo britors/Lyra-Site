@@ -1,0 +1,38 @@
+---
+/*
+  TODO(branding-sync): substituir por imagens reais de branding/mascot/
+  ou branding/screenshots/ assim que estiverem disponíveis. Este
+  componente existe só para não travar o build em asset ausente.
+*/
+interface Props {
+  label: string;
+  kind?: 'mascot' | 'screenshot';
+  aspectRatio?: string;
+}
+
+const { label, kind = 'screenshot', aspectRatio = '16 / 10' } = Astro.props;
+---
+
+<div class="placeholder-art" data-kind={kind} style={`aspect-ratio: ${aspectRatio};`}>
+  <span class="placeholder-art__label">{label}</span>
+</div>
+
+<style>
+  .placeholder-art {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border-radius: var(--radius-card);
+    border: 1px dashed var(--lyra-border);
+    background: linear-gradient(135deg, rgba(59, 91, 219, 0.15), rgba(124, 58, 237, 0.15));
+    color: var(--lyra-star-dim);
+    font-size: 0.9rem;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .placeholder-art[data-kind='mascot'] {
+    border-radius: 50%;
+  }
+</style>
