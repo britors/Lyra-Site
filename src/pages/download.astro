@@ -3,11 +3,13 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import DownloadBlock from '../components/DownloadBlock.astro';
 
 // TODO(release-sync): substituir por dados reais do release mais recente.
-const isoName = 'lyra-os-2026.07-x86_64';
+const isoName = 'lyra-2026.07-gnome-x86_64';
 const isoUrl = `/downloads/${isoName}.iso`;
 const sha256Url = `/downloads/${isoName}.sha256`;
 const torrentUrl = `/downloads/${isoName}.torrent`;
 
+// TODO(hw-validation): valores genéricos de base Fedora Workstation —
+// validar contra o hardware mínimo efetivamente testado antes do lançamento.
 const requirements = [
   { label: 'Processador', value: 'x86_64 (64 bits)' },
   { label: 'Memória RAM', value: '4 GB (recomendado 8 GB)' },
@@ -39,8 +41,21 @@ const requirements = [
         </figure>
         <figure class="preview-card card">
           <img src="/images/lyraterminal.png" alt="Terminal do Lyra OS com fastfetch" loading="lazy" decoding="async" />
-          <figcaption>Base Arch com terminal pronto para quem curte linha de comando.</figcaption>
+          <figcaption>Base Fedora com terminal pronto para quem curte linha de comando.</figcaption>
         </figure>
+      </div>
+
+      <div class="variant-grid">
+        <div class="card variant-card variant-card--available">
+          <h3>Lyra OS — GNOME</h3>
+          <p>Disponível para download agora.</p>
+          <span class="variant-badge variant-badge--available">Disponível</span>
+        </div>
+        <div class="card variant-card variant-card--wip">
+          <h3>Lyra OS — KDE</h3>
+          <p>Ainda em desenvolvimento, sem data de lançamento definida.</p>
+          <span class="variant-badge variant-badge--wip">Em desenvolvimento</span>
+        </div>
       </div>
 
       <DownloadBlock
@@ -101,6 +116,47 @@ const requirements = [
     color: var(--lyra-star-dim);
     font-size: 0.9rem;
     line-height: 1.4;
+  }
+
+  .variant-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .variant-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .variant-card p {
+    color: var(--lyra-star-dim);
+    margin: 0;
+  }
+
+  .variant-card--wip {
+    opacity: 0.75;
+  }
+
+  .variant-badge {
+    display: inline-block;
+    width: fit-content;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 0.2rem 0.6rem;
+    border-radius: 999px;
+  }
+
+  .variant-badge--available {
+    background: var(--lyra-neon);
+    color: var(--lyra-night);
+  }
+
+  .variant-badge--wip {
+    background: var(--lyra-border);
+    color: var(--lyra-star-dim);
   }
 
   .requirements {

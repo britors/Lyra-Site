@@ -27,9 +27,9 @@ Os principais pontos:
 - **`src/pages/download.astro`** — nome/versão da ISO, tamanho do arquivo e
   comandos de verificação SHA-256/GPG são placeholders. Substituir pelo
   texto exato de `PROMPT-LYRA-RELEASE-SHELIAK.md §2.2`.
-- **`src/pages/comunidade.astro`** e o link do AUR em `src/pages/vega.astro**
-  — URLs reais (GitHub Discussions, Telegram, pacote AUR do Vega, canal de
-  report de problema) ainda não foram confirmadas.
+- **`src/pages/comunidade.astro`** e o link do repositório do Vega em
+  `src/pages/vega.astro` — URLs reais (GitHub Discussions, Telegram, canal
+  de report de problema) ainda não foram confirmadas.
 - **`astro.config.mjs`** — domínio (`site`) definido como `lyraos.org`,
   a confirmar.
 
