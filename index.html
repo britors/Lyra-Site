@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#16191d">
+    <meta name="description" content="Lyra OS — um sistema desktop independente baseado no openSUSE Leap 16. Harmonia. Performance. Liberdade.">
+    <title>Lyra OS — Harmonia. Performance. Liberdade.</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+      try { document.documentElement.dataset.theme = localStorage.getItem('lyra-theme') || 'dark'; }
+      catch { document.documentElement.dataset.theme = 'dark'; }
+    </script>
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <header class="site-header" id="topo">
+      <div class="container nav-wrap">
+        <a class="brand" href="#topo" aria-label="Lyra OS, início">
+          <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true">
+            <path class="mark-outer" d="M10 11v17.4c0 7 5.7 12.6 12.7 12.6S35.4 35.4 35.4 28.4V11" />
+            <path class="mark-base" d="M7.5 31.4c3.6 5.5 8.8 8.4 15.2 8.4 6.4 0 11.7-2.9 15.3-8.4" />
+            <path class="mark-string" d="M16 12v16M23 12v16M30 12v16" />
+            <path class="mark-star" d="m38 5 .9 2.8L42 8.7l-3.1.9L38 12.5l-.9-2.9-3.1-.9L37.1 7z" />
+          </svg>
+          <span class="brand-copy"><strong>Lyra <em>OS</em></strong><small>Harmonia · Performance · Liberdade</small></span>
+        </a>
+
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+          <span class="sr-only">Abrir menu</span>
+          <span></span><span></span><span></span>
+        </button>
+
+        <nav class="site-nav" id="site-nav" aria-label="Navegação principal">
+          <a href="#sobre">Sobre</a>
+          <a href="#base">A base</a>
+          <a href="#ecossistema">Ecossistema</a>
+          <a href="#download" class="nav-cta">Download <span aria-hidden="true">↗</span></a>
+          <button class="theme-toggle" type="button" aria-label="Ativar tema claro" aria-pressed="false">
+            <span class="theme-icon" aria-hidden="true">☼</span>
+            <span class="theme-label">Tema</span>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <main id="conteudo">
+      <section class="hero section-shell" aria-labelledby="hero-title">
+        <div class="hero-glow hero-glow-one" aria-hidden="true"></div>
+        <div class="hero-glow hero-glow-two" aria-hidden="true"></div>
+        <div class="container hero-grid">
+          <div class="hero-copy reveal">
+            <p class="eyebrow"><span class="status-dot"></span> Projeto independente em construção</p>
+            <h1 id="hero-title">Conheça o<br><span class="gradient-text">Lyra OS.</span></h1>
+            <p class="hero-lede">Um desktop feito para encontrar o equilíbrio entre potência, estabilidade e liberdade.</p>
+            <p class="slogan">Harmonia. Performance. Liberdade.</p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#download">Acompanhar lançamento <span aria-hidden="true">→</span></a>
+              <a class="text-link" href="#sobre">Descobrir o projeto <span aria-hidden="true">↓</span></a>
+            </div>
+            <div class="hero-meta" aria-label="Informações da primeira release">
+              <div><span class="meta-label">Primeira release</span><strong>Odisseia</strong></div>
+              <div><span class="meta-label">Base do sistema</span><strong>openSUSE Leap 16</strong></div>
+            </div>
+          </div>
+
+          <div class="hero-art reveal" role="img" aria-label="Marca Lyra OS e contagem para a primeira release">
+            <div class="art-orbit orbit-a"></div>
+            <div class="art-orbit orbit-b"></div>
+            <div class="art-star star-a">✦</div>
+            <div class="art-star star-b">✧</div>
+            <div class="lyra-emblem">
+              <svg viewBox="0 0 180 180" aria-hidden="true">
+                <defs>
+                  <linearGradient id="emblemGradient" x1="0" x2="1" y1="1" y2="0">
+                    <stop offset="0" stop-color="#8c9cf4" />
+                    <stop offset="1" stop-color="#e2d8ff" />
+                  </linearGradient>
+                </defs>
+                <path d="M46 35v61c0 25 20 45 44 45s44-20 44-45V35" fill="none" stroke="url(#emblemGradient)" stroke-linecap="round" stroke-width="9" />
+                <path d="M32 103c12 22 31 33 58 33s46-11 58-33" fill="none" stroke="url(#emblemGradient)" stroke-linecap="round" stroke-width="9" />
+                <path d="M69 38v57M90 38v57M111 38v57" fill="none" stroke="#f5f5ff" stroke-linecap="round" stroke-opacity=".86" stroke-width="3" />
+                <path d="m139 21 3.2 10.2 10.4 3.2-10.4 3.2-3.2 10.2-3.2-10.2-10.4-3.2 10.4-3.2z" fill="#fff" />
+              </svg>
+            </div>
+            <div class="release-card">
+              <span class="card-kicker">Odisseia · ISO 01</span>
+              <strong>15 <small>AGO</small> 2026</strong>
+              <div class="countdown" data-countdown aria-live="polite">
+                <span><b data-unit="days">—</b><small>dias</small></span>
+                <span><b data-unit="hours">—</b><small>horas</small></span>
+                <span><b data-unit="minutes">—</b><small>min</small></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a class="scroll-cue" href="#sobre" aria-label="Rolar para a seção Sobre"><span></span> role para explorar</a>
+      </section>
+
+      <section class="intro-section section-shell" id="sobre" aria-labelledby="sobre-title">
+        <div class="container intro-grid">
+          <div class="section-heading reveal">
+            <p class="eyebrow">01 / A ideia</p>
+            <h2 id="sobre-title">Um sistema que<br><span class="muted-gradient">não fica no caminho.</span></h2>
+          </div>
+          <div class="intro-copy reveal">
+            <p>Lyra OS é um projeto pessoal independente de <strong>Rodrigo Brito</strong>, criado para transformar o desktop Linux em um lugar mais coerente, acolhedor e confiável.</p>
+            <p>O nome vem da constelação de Lyra: um pequeno desenho no céu com uma identidade marcante. É dessa mesma ideia de clareza e proporção que nasce cada escolha do sistema.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="base-section section-shell" id="base" aria-labelledby="base-title">
+        <div class="container base-grid">
+          <div class="base-visual reveal" aria-hidden="true">
+            <div class="base-ring ring-one"></div><div class="base-ring ring-two"></div>
+            <div class="base-core"><span>16</span><small>LEAP</small></div>
+            <span class="visual-label label-top">ciclo previsível</span>
+            <span class="visual-label label-right">estabilidade</span>
+            <span class="visual-label label-bottom">open source</span>
+          </div>
+          <div class="base-copy reveal">
+            <p class="eyebrow">02 / A fundação</p>
+            <h2 id="base-title">A estabilidade<br>como ponto de partida.</h2>
+            <p>Lyra OS escolhe o <strong>openSUSE Leap 16</strong> como sua base. Uma decisão intencional por uma fundação madura, com ciclo de lançamento previsível e foco em consistência.</p>
+            <p>Em um cenário dominado por bases Arch, Ubuntu e Fedora, o Leap traz uma alternativa sólida para quem quer usar o desktop com tranquilidade — sem abrir mão de performance ou liberdade.</p>
+            <a class="arrow-link" href="https://www.opensuse.org/" target="_blank" rel="noreferrer">Conhecer o openSUSE <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="ecosystem-section section-shell" id="ecossistema" aria-labelledby="ecosistema-title">
+        <div class="container">
+          <div class="section-heading centered reveal">
+            <p class="eyebrow">03 / O coração</p>
+            <h2 id="ecosistema-title">Tudo encontra seu centro.</h2>
+            <p>O Vega organiza o essencial e dá ao sistema um ponto de partida simples, claro e humano.</p>
+          </div>
+          <div class="vega-card reveal">
+            <div class="vega-art" aria-hidden="true">
+              <div class="vega-glow"></div>
+              <div class="vega-orbit orbit-large"></div><div class="vega-orbit orbit-small"></div>
+              <div class="vega-symbol">
+                <svg viewBox="0 0 100 100"><path d="M27 18v34c0 13 10 23 23 23s23-10 23-23V18M19 56c6 12 16 18 31 18s25-6 31-18M39 19v31M50 19v31M61 19v31" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="4"/><path d="m76 13 1.8 5.6 5.7 1.8-5.7 1.8-1.8 5.6-1.8-5.6-5.7-1.8 5.7-1.8z" fill="currentColor"/></svg>
+              </div>
+            </div>
+            <div class="vega-content">
+              <div class="vega-title"><span class="number-tag">01</span><h3>Vega</h3></div>
+              <p>O centro de controle do Lyra OS. O único componente do ecossistema que vem pré-instalado na primeira release, desenhado para deixar as decisões importantes sempre ao alcance.</p>
+              <div class="vega-note"><span class="note-icon">✦</span><span>Vega é a estrela mais brilhante da constelação de Lyra — o coração que orienta todo o sistema.</span></div>
+            </div>
+          </div>
+          <p class="ecosystem-footnote reveal">O ecossistema cresce com cuidado. Os demais componentes seguem em desenvolvimento e validação para releases futuras.</p>
+        </div>
+      </section>
+
+      <section class="preview-section section-shell" aria-labelledby="preview-title">
+        <div class="container preview-grid">
+          <div class="preview-copy reveal">
+            <p class="eyebrow">04 / A experiência</p>
+            <h2 id="preview-title">Familiar por natureza.<br><span class="muted-gradient">Lyra por escolha.</span></h2>
+            <p>Um GNOME limpo, com o branding do Lyra aplicado com intenção. Menos ruído visual, mais espaço para aquilo que você quer fazer.</p>
+            <div class="feature-list">
+              <div><span>01</span><p>Interface clara e consistente</p></div>
+              <div><span>02</span><p>Base sólida para o seu dia a dia</p></div>
+              <div><span>03</span><p>Liberdade para personalizar</p></div>
+            </div>
+          </div>
+          <div class="desktop-preview reveal" role="img" aria-label="Prévia ilustrativa do desktop GNOME com branding Lyra OS">
+            <div class="window-bar"><span class="window-dot red"></span><span class="window-dot yellow"></span><span class="window-dot green"></span><span class="window-title">Vega · Lyra OS</span></div>
+            <div class="desktop-body">
+              <div class="desktop-sidebar"><div class="mini-logo">L</div><span class="side-line active"></span><span class="side-line"></span><span class="side-line"></span><span class="side-line short"></span></div>
+              <div class="desktop-main"><div class="mini-top"><span>Bom dia, Rodrigo</span><span class="mini-date">15 ago 2026</span></div><div class="mini-welcome"><span class="mini-star">✦</span><div><small>VEGA / CENTRO DE CONTROLE</small><strong>Seu sistema,<br>em harmonia.</strong></div></div><div class="mini-cards"><span></span><span></span><span></span></div></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="download-section section-shell" id="download" aria-labelledby="download-title">
+        <div class="download-shape" aria-hidden="true"></div>
+        <div class="container download-inner reveal">
+          <p class="eyebrow">05 / A primeira jornada</p>
+          <h2 id="download-title">Pronto para<br><span class="gradient-text">a Odisseia?</span></h2>
+          <p>A primeira ISO do Lyra OS chega em 15 de agosto de 2026 para arquitetura x86_64.</p>
+          <div class="download-actions"><a class="button button-primary" href="#download" aria-disabled="true">ISO em breve <span aria-hidden="true">→</span></a><span class="download-note">O link de download será publicado aqui no lançamento.</span></div>
+          <div class="release-line"><span>Odisseia / 01</span><span>15.08.2026</span><span>x86_64</span></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <a class="brand" href="#topo" aria-label="Voltar ao início">
+          <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true"><path class="mark-outer" d="M10 11v17.4c0 7 5.7 12.6 12.7 12.6S35.4 35.4 35.4 28.4V11" /><path class="mark-base" d="M7.5 31.4c3.6 5.5 8.8 8.4 15.2 8.4 6.4 0 11.7-2.9 15.3-8.4" /><path class="mark-string" d="M16 12v16M23 12v16M30 12v16" /><path class="mark-star" d="m38 5 .9 2.8L42 8.7l-3.1.9L38 12.5l-.9-2.9-3.1-.9L37.1 7z" /></svg>
+          <span class="brand-copy"><strong>Lyra <em>OS</em></strong><small>Harmonia · Performance · Liberdade</small></span>
+        </a>
+        <p>Projeto pessoal independente de Rodrigo Brito.<br>Feito com curiosidade, cuidado e software livre.</p>
+        <div class="footer-links"><a href="https://github.com/britors" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a><a href="#topo">Voltar ao topo <span aria-hidden="true">↑</span></a></div>
+      </div>
+      <div class="container footer-bottom"><span>© 2026 Rodrigo Brito</span><span>Lyra OS · Odisseia</span></div>
+    </footer>
+  </body>
+</html>
