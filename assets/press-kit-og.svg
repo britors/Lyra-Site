@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="1" y2="0"><stop stop-color="#11141b"/><stop offset="1" stop-color="#19223d"/></linearGradient>
+    <linearGradient id="accent" x1="0" x2="1"><stop stop-color="#d7dbfb"/><stop offset="1" stop-color="#8498f3"/></linearGradient>
+    <radialGradient id="glow"><stop stop-color="#7d91ee" stop-opacity=".3"/><stop offset="1" stop-color="#7d91ee" stop-opacity="0"/></radialGradient>
+    <pattern id="grid" width="64" height="64" patternUnits="userSpaceOnUse"><path d="M64 0H0V64" fill="none" stroke="#d8ddff" stroke-opacity=".055"/></pattern>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <circle cx="942" cy="295" r="280" fill="url(#glow)"/>
+  <g fill="none" stroke="#a7b4f4" stroke-opacity=".3">
+    <ellipse cx="945" cy="300" rx="230" ry="115" transform="rotate(-24 945 300)"/>
+    <ellipse cx="945" cy="300" rx="115" ry="230" transform="rotate(34 945 300)"/>
+  </g>
+  <g stroke="#a7b4f4" stroke-opacity=".45" fill="#e6e9ff"><path d="m766 176 152 91 97-148 81 318" fill="none"/><circle cx="766" cy="176" r="5"/><circle cx="918" cy="267" r="7"/><circle cx="1015" cy="119" r="5"/><circle cx="1096" cy="437" r="7"/></g>
+  <g transform="translate(847 190) scale(1.45)" fill="none" stroke="url(#accent)" stroke-linecap="round">
+    <path d="M46 35v61c0 25 20 45 44 45s44-20 44-45V35M32 103c12 22 31 33 58 33s46-11 58-33" stroke-width="8"/>
+    <path d="M69 38v57M90 38v57M111 38v57" stroke-width="3" opacity=".75"/>
+    <path d="m139 21 3.2 10.2 10.4 3.2-10.4 3.2-3.2 10.2-3.2-10.2-10.4-3.2 10.4-3.2z" fill="#eef0ff" stroke="none"/>
+  </g>
+  <text x="92" y="116" fill="#91a4fa" font-family="Inter,Arial,sans-serif" font-size="17" font-weight="700" letter-spacing="4">RECURSOS OFICIAIS · 2026</text>
+  <text x="82" y="315" fill="#f1f2f8" font-family="Inter,Arial,sans-serif" font-size="137" font-weight="750" letter-spacing="-10">Press</text>
+  <text x="407" y="315" fill="url(#accent)" font-family="Inter,Arial,sans-serif" font-size="137" font-weight="750" letter-spacing="-10">Kit.</text>
+  <text x="92" y="385" fill="#b8bdcc" font-family="Inter,Arial,sans-serif" font-size="28">Tudo para conhecer, testar e divulgar o Lyra OS.</text>
+  <rect x="92" y="449" width="115" height="34" rx="17" fill="#8498f3" fill-opacity=".15" stroke="#8498f3" stroke-opacity=".6"/>
+  <text x="116" y="472" fill="#b9c4ff" font-family="Inter,Arial,sans-serif" font-size="14" font-weight="700">BETA 1</text>
+  <text x="224" y="472" fill="#7f879b" font-family="Inter,Arial,sans-serif" font-size="14">openSUSE Leap 16.0 · Brasil</text>
+</svg>
