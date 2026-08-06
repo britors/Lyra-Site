@@ -35,22 +35,6 @@
     menuToggle?.setAttribute('aria-expanded', 'false');
   }));
 
-  const countdown = document.querySelector('[data-countdown]');
-  const releaseDate = new Date('2026-08-15T00:00:00-03:00').getTime();
-  const updateCountdown = () => {
-    if (!countdown) return;
-    const distance = releaseDate - Date.now();
-    const values = distance > 0
-      ? [Math.floor(distance / 86400000), Math.floor((distance / 3600000) % 24), Math.floor((distance / 60000) % 60)]
-      : [0, 0, 0];
-    ['days', 'hours', 'minutes'].forEach((unit, index) => {
-      const element = countdown.querySelector(`[data-unit="${unit}"]`);
-      if (element) element.textContent = String(values[index]).padStart(2, '0');
-    });
-  };
-  updateCountdown();
-  window.setInterval(updateCountdown, 60000);
-
   const revealItems = document.querySelectorAll('.reveal');
   if ('IntersectionObserver' in window) {
     const observer = new IntersectionObserver((entries, instance) => {
