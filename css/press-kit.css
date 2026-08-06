@@ -136,6 +136,7 @@
 .shot { margin: 0; min-width: 0; }
 .shot-wide { grid-column: span 2; }
 .shot-visual { background: #202634; border: 1px solid var(--line); height: 335px; overflow: hidden; position: relative; transition: border-color .25s ease, transform .3s ease; }
+.shot-visual img { display: block; height: 100%; object-fit: cover; width: 100%; }
 .shot-wide .shot-visual { height: 560px; }
 .shot:hover .shot-visual { border-color: var(--line-strong); transform: translateY(-3px); }
 .shot figcaption { align-items: center; display: flex; font-size: .78rem; font-weight: 600; gap: 12px; padding: 13px 3px; }
