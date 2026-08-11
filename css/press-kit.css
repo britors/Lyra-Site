@@ -159,7 +159,18 @@
 .details-grid { display: grid; gap: 100px; grid-template-columns: 1fr 1fr; }
 .details-grid h2 { font-size: clamp(2.5rem,4vw,3.7rem); }
 .spec-table { border-top: 1px solid var(--line); margin: 42px 0 0; }.spec-table div { border-bottom: 1px solid var(--line); display: grid; font-size: .78rem; grid-template-columns: 1fr 1.3fr; padding: 14px 0; }.spec-table dt { color: var(--text-muted); }.spec-table dd { margin: 0; }
-.roadmap { list-style: none; margin: 42px 0 0; padding: 0; }.roadmap li { display: grid; gap: 22px; grid-template-columns: 16px 1fr; min-height: 110px; position: relative; }.roadmap li::before { background: var(--line-strong); content: ""; left: 5px; position: absolute; top: 10px; bottom: -4px; width: 1px; }.roadmap li:last-child::before { display: none; }.roadmap li > span { background: var(--bg); border: 1px solid var(--line-strong); border-radius: 50%; height: 11px; margin-top: 4px; position: relative; width: 11px; z-index: 1; }.roadmap li.is-current > span { background: var(--blue); border-color: var(--blue); box-shadow: 0 0 0 5px color-mix(in srgb,var(--blue) 12%,transparent); }.roadmap small { color: var(--text-muted); font-size: .53rem; letter-spacing: .13em; }.roadmap h3 { font-size: .98rem; margin: 3px 0; }.roadmap p { color: var(--text-muted); font-size: .7rem; }
+.roadmap { list-style: none; margin: 42px 0 0; padding: 0; }.roadmap li { display: grid; gap: 22px; grid-template-columns: 16px 1fr; min-height: 110px; position: relative; }.roadmap li::before { background: var(--line-strong); content: ""; left: 5px; position: absolute; top: 10px; bottom: -4px; width: 1px; }.roadmap li:last-child::before { display: none; }.roadmap li > span { background: var(--bg); border: 1px solid var(--line-strong); border-radius: 50%; height: 11px; margin-top: 4px; position: relative; width: 11px; z-index: 1; }.roadmap li.is-current > span { background: var(--blue); border-color: var(--blue); box-shadow: 0 0 0 5px color-mix(in srgb,var(--blue) 12%,transparent); }.roadmap small { color: var(--text-muted); font-size: .53rem; letter-spacing: .13em; }.roadmap h3, .roadmap h4 { font-size: .98rem; margin: 3px 0; }.roadmap p { color: var(--text-muted); font-size: .7rem; }
+
+/* Full release roadmap */
+.roadmap-full-section .section-heading { max-width: 720px; }
+.roadmap-intro { color: var(--text-soft); font-size: .92rem; margin: 25px 0 0; }
+.roadmap-groups { display: grid; gap: 90px; grid-template-columns: 1fr 1fr; margin-top: 70px; }
+.roadmap-group h3 { color: var(--text); font-size: 1.3rem; margin: 0; }
+.roadmap-group h3 small { color: var(--text-muted); font-size: .68rem; font-weight: 400; letter-spacing: 0; }
+.roadmap-group .roadmap { min-height: 0; }
+.roadmap-group .roadmap li { min-height: 88px; }
+.roadmap-note { color: var(--text-muted); font-size: .72rem; line-height: 1.6; margin: 20px 0 0; }
+.roadmap-footnote { border-top: 1px solid var(--line); margin-top: 65px; max-width: 780px; padding-top: 28px; }
 
 /* Founder */
 .founder-section { background: var(--bg-raised); }
@@ -196,7 +207,7 @@
   .press-hero-inner { grid-template-columns: 1fr; }
   .press-hero-copy { max-width: 640px; text-align: center; }.press-hero-copy .eyebrow, .press-hero-actions { justify-content: center; }.press-hero-copy > p:not(.eyebrow) { margin-left: auto; margin-right: auto; }
   .press-hero-art { height: 420px; margin-top: 10px; transform: none; }
-  .split-heading, .story-grid, .vega-layout, .details-grid, .founder-grid, .contact-grid { gap: 60px; grid-template-columns: 1fr; }
+  .split-heading, .story-grid, .vega-layout, .details-grid, .founder-grid, .contact-grid, .roadmap-groups { gap: 60px; grid-template-columns: 1fr; }
   .long-copy { padding-top: 0; }
   .philosophy-grid { grid-template-columns: repeat(2,1fr); margin-top: 65px; }.principle-card { margin-bottom: -1px; }
   .story-grid { min-height: 0; }.story-mark { height: 270px; order: 2; width: 270px; }.story-copy { max-width: 650px; }
