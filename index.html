@@ -204,7 +204,7 @@
 
           <div class="roadmap-groups">
             <article class="roadmap-group reveal">
-              <h3>Lyra OS 1.0 <small>base openSUSE Leap 16.0</small></h3>
+              <h3>Lyra OS Desktop 1.0 <small>base openSUSE Leap 16.0</small></h3>
               <ol class="roadmap-list">
                 <li class="is-past"><div><small>LANÇADA</small><h4>Alpha 1</h4><p>06 ago 2026 · antes rotulada Beta 1</p></div></li>
                 <li class="is-current"><div><small>VERSÃO ATUAL</small><h4>Alpha 2</h4><p>09 ago 2026 · antes rotulada Beta 2</p></div></li>
@@ -222,7 +222,24 @@
             </article>
 
             <article class="roadmap-group reveal">
-              <h3>Lyra OS 1.1 <small>rebase para openSUSE Leap 16.1</small></h3>
+              <h3>Lyra OS Server 1.0 <small>ciclo com gate independente</small></h3>
+              <p class="roadmap-note roadmap-group-intro">O Server possui ciclo e gate independentes, mas segue a mesma cadência e os mesmos critérios de qualidade do Desktop. Desktop e Server não precisam ser publicados no mesmo dia.</p>
+              <ol class="roadmap-list">
+                <li class="is-current"><div><small>VERSÃO ATUAL · 3 SEMANAS</small><h4>Alpha 1</h4><p>11 ago – 01 set 2026</p><span class="sr-only">Objetivo: repetir a instalação completa e produzir candidato rastreável.</span></div></li>
+                <li><div><small>3 SEMANAS</small><h4>Alpha 2</h4><p>01 – 22 set 2026</p><span class="sr-only">Objetivo: fechar Secure Boot, primeiro boot, DHCP, SSH, firewall, vegad e vega-web com evidências.</span></div></li>
+                <li><div><small>3 SEMANAS · SE NECESSÁRIA</small><h4>Alpha 3</h4><p>22 set – 13 out 2026</p><span class="sr-only">Objetivo: resolver bloqueadores restantes e ampliar hardware, sem adicionar novo escopo.</span></div></li>
+                <li><div><small>4 SEMANAS</small><h4>Beta 1</h4><p>13 out – 10 nov 2026</p><span class="sr-only">Objetivo: congelamento funcional do fluxo disco inteiro/ext4.</span></div></li>
+                <li><div><small>4 SEMANAS</small><h4>Beta 2</h4><p>10 nov – 08 dez 2026</p><span class="sr-only">Objetivo: estabilidade, atualizações, rede e administração remota.</span></div></li>
+                <li><div><small>4 SEMANAS</small><h4>Beta 3</h4><p>08 dez 2026 – 05 jan 2027</p><span class="sr-only">Objetivo: internacionalização aplicável e documentação operacional.</span></div></li>
+                <li><div><small>2 SEMANAS</small><h4>RC 1</h4><p>05 – 19 jan 2027</p><span class="sr-only">Objetivo: candidato completo e assinado, validado em máquina virtual e hardware.</span></div></li>
+                <li><div><small>2 SEMANAS</small><h4>RC 2</h4><p>19 jan – 02 fev 2027</p><span class="sr-only">Objetivo: somente correções bloqueantes e repetição integral do gate.</span></div></li>
+                <li class="is-final"><div><small>LANÇAMENTO</small><h4>Lyra OS Server 1.0</h4><p>~16 fev 2027</p><span class="sr-only">Objetivo: publicação e verificação dos artefatos baixados.</span></div></li>
+              </ol>
+              <p class="roadmap-note">Alvo interno: janeiro; fevereiro é a margem de segurança. Se a fase Alpha terminar na Alpha 2, sem pendências críticas e com todas as evidências do gate, a versão final pode sair por volta de 26 de janeiro de 2027. O Server possui gate independente e não precisa ser publicado no mesmo dia que o Desktop.</p>
+            </article>
+
+            <article class="roadmap-group reveal">
+              <h3>Lyra OS Desktop 1.1 <small>rebase para openSUSE Leap 16.1</small></h3>
               <p class="roadmap-note roadmap-group-intro">O ciclo começa cerca de um mês após a versão 1.0. A mudança de base exige revalidar pacotes, ABI, shim de Secure Boot e a matriz de hardware.</p>
               <ol class="roadmap-list">
                 <li><div><small>3 SEMANAS</small><h4>Alpha 1</h4><p>01 – 22 mar 2027</p></div></li>
