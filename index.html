@@ -202,23 +202,28 @@
             <p class="roadmap-intro">O número de iterações por estágio é um teto, não uma promessa fixa. A promoção acontece por critério de saída — sem itens críticos abertos no gate de release — e não apenas pela data. As janelas abaixo consideram o uso de todo o tempo previsto.</p>
           </div>
 
+          <aside class="roadmap-note roadmap-policy reveal" aria-label="Política de internacionalização e congelamento funcional">
+            <strong>pt-BR + en-US até a Alpha 5 · feature freeze a partir da Beta 1</strong>
+            Todas as features e a infraestrutura de i18n fecham em 13/10/2026; Betas e RCs servem apenas para correções.
+          </aside>
+
           <div class="roadmap-groups">
             <article class="roadmap-group reveal">
               <h3>Lyra OS Desktop 1.0 <small>base openSUSE Leap 16.0</small></h3>
               <ol class="roadmap-list">
                 <li class="is-past"><div><small>LANÇADA</small><h4>Alpha 1</h4><p>06 ago 2026 · antes rotulada Beta 1</p></div></li>
-                <li class="is-current"><div><small>VERSÃO ATUAL</small><h4>Alpha 2</h4><p>09 ago 2026 · antes rotulada Beta 2</p></div></li>
-                <li><div><small>3 SEMANAS</small><h4>Alpha 3</h4><p>11 ago – 01 set 2026</p></div></li>
-                <li><div><small>3 SEMANAS</small><h4>Alpha 4</h4><p>01 – 22 set 2026</p></div></li>
-                <li><div><small>3 SEMANAS</small><h4>Alpha 5</h4><p>22 set – 13 out 2026</p></div></li>
-                <li><div><small>4 SEMANAS</small><h4>Beta 1</h4><p>13 out – 10 nov 2026</p></div></li>
-                <li><div><small>4 SEMANAS</small><h4>Beta 2</h4><p>10 nov – 08 dez 2026</p></div></li>
-                <li><div><small>4 SEMANAS</small><h4>Beta 3</h4><p>08 dez 2026 – 05 jan 2027</p></div></li>
-                <li><div><small>2 SEMANAS</small><h4>RC 1</h4><p>05 – 19 jan 2027</p></div></li>
-                <li><div><small>2 SEMANAS</small><h4>RC 2</h4><p>19 jan – 02 fev 2027</p></div></li>
+                <li class="is-past"><div><small>LANÇADA</small><h4>Alpha 2</h4><p>09 ago 2026 · antes rotulada Beta 2</p></div></li>
+                <li class="is-current"><div><small>VERSÃO ATUAL · ENTREGUE</small><h4>Alpha 3</h4><p>Fechamento do instalador e da publicação.</p><p><strong>11 ago – 01 set 2026</strong></p></div></li>
+                <li><div><small>3 SEMANAS</small><h4>Alpha 4</h4><p>i18n base, instalador bilíngue e NVIDIA via Vega.</p><p><strong>01 – 22 set 2026</strong></p><span class="sr-only">Descrição: Infraestrutura de internacionalização; Lyra Installer, Vega, Fina e Sheliak em pt-BR e en-US; instalação opcional pós-instalação do driver NVIDIA pelo Vega. A ISO padrão continua sem driver proprietário.</span></div></li>
+                <li><div><small>3 SEMANAS</small><h4>Alpha 5</h4><p>Conclusão das traduções e de todas as features da 1.0.</p><p><strong>22 set – 13 out 2026</strong></p><span class="sr-only">Descrição: Internacionalização de Beam, Chord, Sulafat, Aladfar, Prosa, Calco, postgres-draco, vega-cli, vega-web e vegad; integração dos RPMs; QA nos dois idiomas; fechamento total de features.</span></div></li>
+                <li><div><small>FEATURE FREEZE · 4 SEMANAS</small><h4>Beta 1</h4><p>Congelamento funcional e correção de bugs.</p><p><strong>13 out – 10 nov 2026</strong></p><span class="sr-only">Descrição: Nenhuma feature, idioma, componente ou infraestrutura nova. Somente correções de bugs, regressões, segurança, desempenho e traduções existentes.</span></div></li>
+                <li><div><small>4 SEMANAS</small><h4>Beta 2</h4><p>Estabilidade, atualizações e regressões.</p><p><strong>10 nov – 08 dez 2026</strong></p><span class="sr-only">Descrição: Nenhuma feature nova.</span></div></li>
+                <li><div><small>4 SEMANAS</small><h4>Beta 3</h4><p>QA linguístico e correções finais.</p><p><strong>08 dez 2026 – 05 jan 2027</strong></p><span class="sr-only">Descrição: Corrigir catálogos e traduções existentes; não criar infraestrutura, traduzir novo componente nem adicionar idioma.</span></div></li>
+                <li><div><small>2 SEMANAS</small><h4>RC 1</h4><p>Somente bloqueadores P0/P1 e repetição do gate.</p><p><strong>05 – 19 jan 2027</strong></p></div></li>
+                <li><div><small>2 SEMANAS</small><h4>RC 2</h4><p>Somente bloqueadores P0/P1 e repetição do gate.</p><p><strong>19 jan – 02 fev 2027</strong></p></div></li>
                 <li class="is-final"><div><small>LANÇAMENTO</small><h4>Lyra OS 1.0</h4><p>~16 fev 2027</p></div></li>
               </ol>
-              <p class="roadmap-note">Alvo interno: janeiro; fevereiro é folga, não um prazo prometido. Se a fase alpha fechar na Alpha 4, sem pendências críticas, a versão final pode sair por volta de 26 de janeiro de 2027.</p>
+              <p class="roadmap-note">Alpha 4 e Alpha 5 são obrigatórias para concluir features e internacionalização. A Beta 1 inicia o congelamento funcional em 13 de outubro de 2026. Fevereiro é a margem máxima de segurança; a promoção continua condicionada ao gate de qualidade.</p>
             </article>
 
             <article class="roadmap-group reveal">
@@ -230,7 +235,7 @@
                 <li><div><small>3 SEMANAS · SE NECESSÁRIA</small><h4>Alpha 3</h4><p>22 set – 13 out 2026</p><span class="sr-only">Objetivo: resolver bloqueadores restantes e ampliar hardware, sem adicionar novo escopo.</span></div></li>
                 <li><div><small>4 SEMANAS</small><h4>Beta 1</h4><p>13 out – 10 nov 2026</p><span class="sr-only">Objetivo: congelamento funcional do fluxo disco inteiro/ext4.</span></div></li>
                 <li><div><small>4 SEMANAS</small><h4>Beta 2</h4><p>10 nov – 08 dez 2026</p><span class="sr-only">Objetivo: estabilidade, atualizações, rede e administração remota.</span></div></li>
-                <li><div><small>4 SEMANAS</small><h4>Beta 3</h4><p>08 dez 2026 – 05 jan 2027</p><span class="sr-only">Objetivo: internacionalização aplicável e documentação operacional.</span></div></li>
+                <li><div><small>4 SEMANAS</small><h4>Beta 3</h4><p>08 dez 2026 – 05 jan 2027</p><span class="sr-only">Objetivo: QA linguístico dos componentes já internacionalizados e correções finais; nenhuma feature nova.</span></div></li>
                 <li><div><small>2 SEMANAS</small><h4>RC 1</h4><p>05 – 19 jan 2027</p><span class="sr-only">Objetivo: candidato completo e assinado, validado em máquina virtual e hardware.</span></div></li>
                 <li><div><small>2 SEMANAS</small><h4>RC 2</h4><p>19 jan – 02 fev 2027</p><span class="sr-only">Objetivo: somente correções bloqueantes e repetição integral do gate.</span></div></li>
                 <li class="is-final"><div><small>LANÇAMENTO</small><h4>Lyra OS Server 1.0</h4><p>~16 fev 2027</p><span class="sr-only">Objetivo: publicação e verificação dos artefatos baixados.</span></div></li>
@@ -268,7 +273,7 @@
               <span class="download-edition">Desktop</span>
               <h3>Alpha 2</h3>
               <p>Para computadores pessoais, com ambiente gráfico e experiência completa do Lyra OS.</p>
-              <a class="button button-primary" href="https://sourceforge.net/projects/lyra/files/releases/1.0/desktop/alpha2/" target="_blank" rel="noreferrer">Baixar Desktop <span aria-hidden="true">↗</span></a>
+              <a class="button button-primary" href="https://sourceforge.net/projects/lyra/files/releases/1.0/desktop/alpha3/" target="_blank" rel="noreferrer">Baixar Desktop <span aria-hidden="true">↗</span></a>
             </article>
             <article class="download-option">
               <span class="download-edition">Server</span>

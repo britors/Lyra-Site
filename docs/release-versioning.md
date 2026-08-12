@@ -20,20 +20,31 @@ cenário em que todo o teto é usado.
 
 ## Cronograma — Lyra OS 1.0 (base openSUSE Leap 16.0)
 
-| Estágio | Cadência | Janela |
-|---|---|---|
-| Alpha 3 | 3 semanas | 11 ago 2026 – 01 set 2026 |
-| Alpha 4 | 3 semanas | 01 set 2026 – 22 set 2026 |
-| Alpha 5 | 3 semanas | 22 set 2026 – 13 out 2026 |
-| Beta 1 | 4 semanas | 13 out 2026 – 10 nov 2026 |
-| Beta 2 | 4 semanas | 10 nov 2026 – 08 dez 2026 |
-| Beta 3 | 4 semanas | 08 dez 2026 – 05 jan 2027 |
-| RC 1 | 2 semanas | 05 jan 2027 – 19 jan 2027 |
-| RC 2 | 2 semanas | 19 jan 2027 – 02 fev 2027 |
-| **Final — Lyra OS 1.0** | buffer 2 semanas | **~16 fev 2027** (alvo interno: janeiro; fevereiro é folga, não prazo prometido) |
+| Estágio | Cadência | Janela | Política |
+|---|---|---|---|
+| Alpha 3 | 3 semanas | 11 ago 2026 – 01 set 2026 | Fechamento do instalador e da publicação. |
+| Alpha 4 | 3 semanas | 01 set 2026 – 22 set 2026 | Infraestrutura de internacionalização; Lyra Installer, Vega, Fina e Sheliak em pt-BR e en-US; instalação opcional pós-instalação do driver NVIDIA pelo Vega. A ISO padrão continua sem driver proprietário. |
+| Alpha 5 | 3 semanas | 22 set 2026 – 13 out 2026 | Internacionalização de Beam, Chord, Sulafat, Aladfar, Prosa, Calco, postgres-draco, vega-cli, vega-web e vegad; integração dos RPMs; QA nos dois idiomas; fechamento total de features. |
+| Beta 1 | 4 semanas | 13 out 2026 – 10 nov 2026 | **Feature freeze:** nenhuma feature, idioma, componente ou infraestrutura nova. Somente correções de bugs, regressões, segurança, desempenho e traduções existentes. |
+| Beta 2 | 4 semanas | 10 nov 2026 – 08 dez 2026 | Estabilidade, atualizações e regressões. Nenhuma feature nova. |
+| Beta 3 | 4 semanas | 08 dez 2026 – 05 jan 2027 | QA linguístico e correções finais. Corrigir catálogos e traduções existentes; não criar infraestrutura, traduzir novo componente nem adicionar idioma. |
+| RC 1 | 2 semanas | 05 jan 2027 – 19 jan 2027 | Somente bloqueadores P0/P1 e repetição do gate. |
+| RC 2 | 2 semanas | 19 jan 2027 – 02 fev 2027 | Somente bloqueadores P0/P1 e repetição do gate. |
+| **Final — Lyra OS 1.0** | buffer 2 semanas | **~16 fev 2027** | Publicação condicionada ao gate de qualidade. |
 
-Se a fase alpha fechar antecipadamente em Alpha 4 (sem pendência crítica), a
-final sai em torno de **~26 jan 2027**.
+Idiomas obrigatórios até a Alpha 5: **pt-BR e en-US**. Todas as features e a
+infraestrutura de i18n fecham em 13/10/2026; Betas e RCs servem apenas para
+correções. Alpha 4 e Alpha 5 são obrigatórias para concluir features e
+internacionalização. A Beta 1 inicia o congelamento funcional em 13 de outubro
+de 2026. Fevereiro é a margem máxima de segurança; a promoção continua
+condicionada ao gate de qualidade.
+
+## Política do Lyra OS Server 1.0
+
+O Server mantém ciclo e gate independentes. Seu inventário de pacotes não é
+derivado automaticamente do Desktop. Na Beta 3, o objetivo é: **QA linguístico
+dos componentes já internacionalizados e correções finais; nenhuma feature
+nova.**
 
 ## Cronograma — Lyra OS 1.1 (rebase para openSUSE Leap 16.1)
 
