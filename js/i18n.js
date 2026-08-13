@@ -1,7 +1,15 @@
 (() => {
   const DEFAULT_LOCALE = 'pt-BR';
-  const LOCALES = ['pt-BR', 'en-US', 'es-ES', 'zh-CN'];
-  const labels = { 'pt-BR': 'Português', 'en-US': 'English', 'es-ES': 'Español', 'zh-CN': '简体中文' };
+  const LOCALES = [
+    'pt-BR', 'en-US', 'es-ES',
+    // Temporarily hidden from the site; keep it for a future release.
+    // 'zh-CN',
+  ];
+  const labels = {
+    'pt-BR': 'Português', 'en-US': 'English', 'es-ES': 'Español',
+    // Temporarily disabled together with the locale entry above.
+    // 'zh-CN': '简体中文',
+  };
 
   const catalogs = {
     'en-US': {
