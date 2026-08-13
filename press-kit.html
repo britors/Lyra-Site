@@ -48,6 +48,7 @@
         "sameAs": ["https://github.com/britors"]
       }
     </script>
+    <script src="js/i18n.js" defer></script>
     <script src="js/main.js" defer></script>
   </head>
   <body class="press-page">
@@ -191,7 +192,7 @@
       <section class="press-section details-section" aria-labelledby="specs-title">
         <div class="container details-grid">
           <div class="specs-block reveal"><p class="eyebrow">07 / Especificações</p><h2 id="specs-title">Ficha técnica.</h2><dl class="spec-table"><div><dt>Base</dt><dd>openSUSE Leap 16.0</dd></div><div><dt>Kernel</dt><dd>Linux · atual com a base</dd></div><div><dt>Desktop</dt><dd>GNOME</dd></div><div><dt>Sistema de pacotes</dt><dd>RPM</dd></div><div><dt>Gerenciador</dt><dd>Zypper</dd></div><div><dt>Arquitetura</dt><dd>x86_64</dd></div><div><dt>Licença</dt><dd>Open Source</dd></div></dl></div>
-          <div class="roadmap-block reveal"><p class="eyebrow">08 / Roadmap</p><h2>Próximos passos.</h2><ol class="roadmap"><li><span></span><div><small>VERSÃO ANTERIOR</small><h3>Alpha 1</h3><p>Antes rotulada Beta 1 · 06 de agosto de 2026</p></div></li><li><span></span><div><small>VERSÃO ANTERIOR</small><h3>Alpha 2</h3><p>Antes rotulada Beta 2 · tag pública v2026.08-beta2-stable-20260809 · 09 de agosto de 2026</p></div></li><li class="is-current"><span></span><div><small>VERSÃO ATUAL · ENTREGUE</small><h3>Alpha 3</h3><p>11 de agosto – 01 de setembro de 2026</p></div></li></ol><p><a class="text-link" href="#cronograma">Ver cronograma completo até a versão final <span aria-hidden="true">↓</span></a></p></div>
+          <div class="roadmap-block reveal"><p class="eyebrow">08 / Roadmap</p><h2>Próximos passos.</h2><ol class="roadmap"><li><span></span><div><small>VERSÃO ANTERIOR</small><h3>Alpha 2</h3><p>Antes rotulada Beta 2 · tag pública v2026.08-beta2-stable-20260809 · 09 de agosto de 2026</p></div></li><li><span></span><div><small>VERSÃO ANTERIOR</small><h3>Alpha 3</h3><p>11 de agosto de 2026</p></div></li><li class="is-current"><span></span><div><small>PUBLICAÇÃO · 14 AGO</small><h3>Alpha 4</h3><p>Snapshot antecipado de i18n e da primeira onda de pacotes</p></div></li></ol><p><a class="text-link" href="#cronograma">Ver cronograma completo até a versão final <span aria-hidden="true">↓</span></a></p></div>
         </div>
       </section>
 
@@ -204,32 +205,41 @@
           </div>
           <div class="roadmap-groups">
             <div class="roadmap-group reveal">
-              <h3>Lyra OS 1.0 <small>· base openSUSE Leap 16.0</small></h3>
+              <h3>Lyra OS 1.0 <strong class="release-codename">Odisseia</strong><small>· base openSUSE Leap 16.0</small></h3>
               <ol class="roadmap">
-                <li class="is-current"><span></span><div><small>ENTREGUE · 3 SEMANAS</small><h4>Alpha 3</h4><p>11 de agosto – 01 de setembro de 2026</p></div></li>
-                <li><span></span><div><small>CADÊNCIA · 3 SEMANAS</small><h4>Alpha 4</h4><p>01 – 22 de setembro de 2026</p></div></li>
-                <li><span></span><div><small>CADÊNCIA · 3 SEMANAS</small><h4>Alpha 5</h4><p>22 de setembro – 13 de outubro de 2026</p></div></li>
+                <li><span></span><div><small>ENTREGUE</small><h4>Alpha 3</h4><p>11 de agosto de 2026</p></div></li>
+                <li class="is-current"><span></span><div><small>PUBLICAÇÃO ANTECIPADA</small><h4>Alpha 4</h4><p>14 de agosto de 2026</p></div></li>
+                <li><span></span><div><small>CADÊNCIA · 2 SEMANAS</small><h4>Alpha 5</h4><p>14 – 28 de agosto de 2026</p></div></li>
+                <li><span></span><div><small>CADÊNCIA · 2 SEMANAS</small><h4>Alpha 6</h4><p>28 de agosto – 11 de setembro de 2026</p></div></li>
+                <li><span></span><div><small>CADÊNCIA · 2 SEMANAS</small><h4>Alpha 7</h4><p>11 – 25 de setembro de 2026</p></div></li>
+                <li><span></span><div><small>CADÊNCIA · 2 SEMANAS + HARDENING</small><h4>Alpha 8</h4><p>25 de setembro – 13 de outubro de 2026</p></div></li>
                 <li><span></span><div><small>CADÊNCIA · 4 SEMANAS</small><h4>Beta 1</h4><p>13 de outubro – 10 de novembro de 2026</p></div></li>
                 <li><span></span><div><small>CADÊNCIA · 4 SEMANAS</small><h4>Beta 2</h4><p>10 de novembro – 08 de dezembro de 2026</p></div></li>
                 <li><span></span><div><small>CADÊNCIA · 4 SEMANAS</small><h4>Beta 3</h4><p>08 de dezembro de 2026 – 05 de janeiro de 2027</p></div></li>
                 <li><span></span><div><small>CADÊNCIA · 2 SEMANAS</small><h4>RC 1</h4><p>05 – 19 de janeiro de 2027</p></div></li>
                 <li><span></span><div><small>CADÊNCIA · 2 SEMANAS</small><h4>RC 2</h4><p>19 de janeiro – 02 de fevereiro de 2027</p></div></li>
-                <li><span></span><div><small>LANÇAMENTO</small><h4>Lyra OS 1.0</h4><p>~16 de fevereiro de 2027 · alvo interno: janeiro, fevereiro é folga, não prazo prometido</p></div></li>
+                <li><span></span><div><small>LANÇAMENTO</small><h4>Lyra OS 1.0 <strong class="release-codename">Odisseia</strong></h4><p>~16 de fevereiro de 2027 · alvo interno: janeiro, fevereiro é folga, não prazo prometido</p></div></li>
               </ol>
-              <p class="roadmap-note">Alpha 4 e Alpha 5 são obrigatórias para concluir features e internacionalização. A Beta 1 inicia o congelamento funcional em 13 de outubro de 2026. Fevereiro é a margem máxima de segurança; a promoção continua condicionada ao gate de qualidade.</p>
+              <p class="roadmap-note">Alpha 5 a Alpha 8 são obrigatórias; a semana final da Alpha 8 é exclusiva para estabilização. A Beta 1 começa em 13 de outubro somente com o gate verde.</p>
             </div>
             <div class="roadmap-group reveal">
-              <h3>Lyra OS 1.1 <small>· rebase para openSUSE Leap 16.1</small></h3>
-              <p class="roadmap-note">Início cerca de 1 mês após a final do 1.0. A base muda de Leap 16.0 para Leap 16.1, exigindo revalidação de disponibilidade de pacotes, ABI, shim de Secure Boot e matriz de hardware — não é um bump cosmético. O funil é mais enxuto porque o tooling de release e o processo de gate já existem; só a base precisa de requalificação.</p>
+              <h3>Lyra OS 1.1 <strong class="release-codename">Ilíada</strong><small>· rebase para openSUSE Leap 16.1</small></h3>
+              <p class="roadmap-note">Início cerca de 1 mês após a final do 1.0. A base muda para Leap 16.1 e repete o funil completo de oito Alphas, três Betas, duas RCs e uma versão final estável.</p>
               <ol class="roadmap">
-                <li><span></span><div><small>CADÊNCIA · 3 SEMANAS</small><h4>Alpha 1</h4><p>01 – 22 de março de 2027</p></div></li>
-                <li><span></span><div><small>CADÊNCIA · 3 SEMANAS</small><h4>Alpha 2</h4><p>22 de março – 12 de abril de 2027</p></div></li>
-                <li><span></span><div><small>CADÊNCIA · 3 SEMANAS</small><h4>Alpha 3</h4><p>12 de abril – 03 de maio de 2027</p></div></li>
-                <li><span></span><div><small>CADÊNCIA · 4 SEMANAS</small><h4>Beta 1</h4><p>03 – 31 de maio de 2027</p></div></li>
-                <li><span></span><div><small>CADÊNCIA · 4 SEMANAS</small><h4>Beta 2</h4><p>31 de maio – 28 de junho de 2027</p></div></li>
-                <li><span></span><div><small>CADÊNCIA · 2 SEMANAS</small><h4>RC 1</h4><p>28 de junho – 12 de julho de 2027</p></div></li>
-                <li><span></span><div><small>CADÊNCIA · 2 SEMANAS</small><h4>RC 2</h4><p>12 – 26 de julho de 2027</p></div></li>
-                <li><span></span><div><small>LANÇAMENTO</small><h4>Lyra OS 1.1</h4><p>~09 de agosto de 2027</p></div></li>
+                <li><span></span><div><small>CADÊNCIA · 2 SEMANAS</small><h4>Alpha 1</h4><p>01 – 15 de março de 2027</p></div></li>
+                <li><span></span><div><small>CADÊNCIA · 2 SEMANAS</small><h4>Alpha 2</h4><p>15 – 29 de março de 2027</p></div></li>
+                <li><span></span><div><small>CADÊNCIA · 2 SEMANAS</small><h4>Alpha 3</h4><p>29 de março – 12 de abril de 2027</p></div></li>
+                <li><span></span><div><small>CADÊNCIA · 2 SEMANAS</small><h4>Alpha 4</h4><p>12 – 26 de abril de 2027</p></div></li>
+                <li><span></span><div><small>CADÊNCIA · 2 SEMANAS</small><h4>Alpha 5</h4><p>26 de abril – 10 de maio de 2027</p></div></li>
+                <li><span></span><div><small>CADÊNCIA · 2 SEMANAS</small><h4>Alpha 6</h4><p>10 – 24 de maio de 2027</p></div></li>
+                <li><span></span><div><small>CADÊNCIA · 2 SEMANAS</small><h4>Alpha 7</h4><p>24 de maio – 07 de junho de 2027</p></div></li>
+                <li><span></span><div><small>CADÊNCIA · 2 SEMANAS</small><h4>Alpha 8</h4><p>07 – 21 de junho de 2027</p></div></li>
+                <li><span></span><div><small>FEATURE FREEZE · 4 SEMANAS</small><h4>Beta 1</h4><p>21 de junho – 19 de julho de 2027</p></div></li>
+                <li><span></span><div><small>CADÊNCIA · 4 SEMANAS</small><h4>Beta 2</h4><p>19 de julho – 16 de agosto de 2027</p></div></li>
+                <li><span></span><div><small>CADÊNCIA · 4 SEMANAS</small><h4>Beta 3</h4><p>16 de agosto – 13 de setembro de 2027</p></div></li>
+                <li><span></span><div><small>CADÊNCIA · 2 SEMANAS</small><h4>RC 1</h4><p>13 – 27 de setembro de 2027</p></div></li>
+                <li><span></span><div><small>CADÊNCIA · 2 SEMANAS</small><h4>RC 2</h4><p>27 de setembro – 11 de outubro de 2027</p></div></li>
+                <li><span></span><div><small>VERSÃO ESTÁVEL</small><h4>Lyra OS 1.1 <strong class="release-codename">Ilíada</strong></h4><p>~25 de outubro de 2027</p></div></li>
               </ol>
             </div>
           </div>

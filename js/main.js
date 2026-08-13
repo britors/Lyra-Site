@@ -14,8 +14,9 @@
 
   const updateThemeButton = () => {
     const isLight = root.dataset.theme === 'light';
+    const translate = window.LyraI18n?.t || ((value) => value);
     themeToggle.setAttribute('aria-pressed', String(isLight));
-    themeToggle.setAttribute('aria-label', isLight ? 'Ativar tema escuro' : 'Ativar tema claro');
+    themeToggle.setAttribute('aria-label', translate(isLight ? 'Ativar tema escuro' : 'Ativar tema claro'));
     themeToggle.querySelector('.theme-icon').textContent = isLight ? '☾' : '☼';
   };
 
@@ -25,6 +26,7 @@
     updateThemeButton();
   });
   updateThemeButton();
+  window.addEventListener('lyra:locale-changed', updateThemeButton);
 
   menuToggle?.addEventListener('click', () => {
     const isOpen = nav.classList.toggle('is-open');
