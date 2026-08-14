@@ -152,10 +152,10 @@
       });
     });
     const titles = {
-      'pt-BR': document.body.classList.contains('press-page') ? 'Press Kit · Lyra OS' : 'Lyra OS — Harmonia. Performance. Liberdade.',
-      'en-US': document.body.classList.contains('press-page') ? 'Press Kit · Lyra OS' : 'Lyra OS — Harmony. Performance. Freedom.',
-      'es-ES': document.body.classList.contains('press-page') ? 'Kit de prensa · Lyra OS' : 'Lyra OS — Armonía. Rendimiento. Libertad.',
-      'zh-CN': document.body.classList.contains('press-page') ? '媒体资料包 · Lyra OS' : 'Lyra OS — 和谐。性能。自由。'
+      'pt-BR': 'Lyra OS — Harmonia. Performance. Liberdade.',
+      'en-US': 'Lyra OS — Harmony. Performance. Freedom.',
+      'es-ES': 'Lyra OS — Armonía. Rendimiento. Libertad.',
+      'zh-CN': 'Lyra OS — 和谐。性能。自由。'
     };
     document.title = titles[locale];
     document.querySelector('.language-select')?.setAttribute('aria-label', t('Idioma do site'));
