@@ -3,10 +3,10 @@
 Use este documento como prompt/fonte para atualização da página de roadmap do
 site do Lyra OS.
 
-O site possui interface em `pt-BR`, `en-US`, `es-ES` e `zh-CN`, com `pt-BR`
+O site possui interface em `pt-BR`, `en-US` e `es-ES`, com `pt-BR`
 como padrão. Essa cobertura não se estende automaticamente ao livro oficial:
 o livro será publicado somente em **português e inglês**. As interfaces em
-espanhol e chinês devem informar esse limite explicitamente.
+espanhol deve informar esse limite explicitamente.
 
 ## Contexto
 
@@ -23,16 +23,22 @@ aberto no gate de release do estágio), não apenas pela data. Se um estágio
 fechar mais cedo, a próxima fase começa mais cedo — as datas assumem o
 cenário em que todo o teto é usado.
 
+## Política de suporte da família 1.x
+
+A versão maior Lyra OS 1.x terá suporte até **outubro de 2032**. Cada versão
+menor mantém seu próprio ciclo de suporte e pode exigir a migração para uma
+versão 1.x mais recente.
+
 ## Cronograma — Lyra OS 1.0 “Odisseia” (base openSUSE Leap 16.0)
 
 | Estágio | Cadência | Janela | Política |
 |---|---|---|---|
 | Alpha 3 | concluída | 11 ago 2026 | Fechamento do instalador e da publicação. |
-| Alpha 4 | snapshot antecipado | 14 ago 2026 | Infraestrutura de internacionalização, instalador em quatro idiomas e primeira onda de pacotes. |
-| Alpha 5 | 2 semanas | 14 ago 2026 – 28 ago 2026 | i18n restante, fluxo NVIDIA e contratos do Lyra Upgrade. |
-| Alpha 6 | 2 semanas | 28 ago 2026 – 11 set 2026 | Integração dos RPMs, core e serviço de update. |
+| Alpha 4 | snapshot antecipado | 14 ago 2026 | Infraestrutura de internacionalização, instalador em três idiomas e primeira onda de pacotes. |
+| Alpha 5 | 2 semanas | 14 ago 2026 – 28 ago 2026 | Estabilização dos bloqueadores herdados; i18n restante; NVIDIA pós-instalação pelo Vega; contratos do Lyra Upgrade. |
+| Alpha 6 | 2 semanas | 28 ago 2026 – 11 set 2026 | Qualificação de i18n/NVIDIA; core, preflight, estado durável e serviço privilegiado de update. |
 | Alpha 7 | 2 semanas | 11 set 2026 – 25 set 2026 | Interface, verificação pós-boot, recuperação e rollback. |
-| Alpha 8 | 2 semanas e 4 dias | 25 set 2026 – 13 out 2026 | Upgrade entre releases, gate automatizado e semana final de estabilização. |
+| Alpha 8 | 2 semanas e 4 dias | 25 set 2026 – 13 out 2026 | Upgrade entre releases e gate automatizado até 06/10; semana de 06–13/10 exclusiva para estabilização. |
 | Beta 1 | 4 semanas | 13 out 2026 – 10 nov 2026 | **Feature freeze:** nenhuma feature, idioma, componente ou infraestrutura nova. Somente correções de bugs, regressões, segurança, desempenho e traduções existentes. |
 | Beta 2 | 4 semanas | 10 nov 2026 – 08 dez 2026 | Estabilidade, atualizações e regressões. Nenhuma feature nova. |
 | Beta 3 | 4 semanas | 08 dez 2026 – 05 jan 2027 | QA linguístico e correções finais. Corrigir catálogos e traduções existentes; não criar infraestrutura, traduzir novo componente nem adicionar idioma. |
@@ -40,12 +46,32 @@ cenário em que todo o teto é usado.
 | RC 2 | 2 semanas | 19 jan 2027 – 02 fev 2027 | Somente bloqueadores P0/P1 e repetição do gate. |
 | **Final — Lyra OS 1.0 “Odisseia”** | buffer 2 semanas | **~16 fev 2027** | Publicação condicionada ao gate de qualidade. |
 
-Idiomas obrigatórios para os pacotes próprios: **pt-BR e en-US**. Todas as features e a
-infraestrutura de i18n fecham em 13/10/2026; Betas e RCs servem apenas para
-correções. Alpha 5, Alpha 6, Alpha 7 e Alpha 8 são obrigatórias para concluir features e
-internacionalização. A Beta 1 inicia o congelamento funcional em 13 de outubro
-de 2026. Fevereiro é a margem máxima de segurança; a promoção continua
-condicionada ao gate de qualidade.
+O Lyra OS 1.0 oferece somente **en-US, pt-BR e es-ES** no instalador e na
+seleção de idioma do sistema. Outros idiomas ficam fora do
+escopo da 1.0 e só podem entrar em um ciclo futuro com catálogo, revisão e gate
+próprios. Para os pacotes próprios cuja interface ainda não cobre os três,
+**pt-BR e en-US** continuam sendo o gate mínimo obrigatório. Alpha 5,
+Alpha 6, Alpha 7 e Alpha 8 são obrigatórias e possuem gates próprios. Um P0/P1
+interrompe a ampliação de escopo da Alpha corrente e não é transferido por
+conveniência. Toda implementação funcional e infraestrutura de i18n fecha até
+06/10/2026; a semana de 06–13/10 recebe somente estabilização. Sem gate verde,
+a fase Alpha continua em vez de iniciar a Beta 1.
+
+### Distribuição das Alphas restantes
+
+- **Alpha 5 — estabilização e fundações:** corrigir os bloqueadores do
+  instalador e do pipeline de release; concluir a segunda onda de i18n;
+  entregar a instalação opcional do NVIDIA pelo Vega com snapshot e rollback;
+  aprovar arquitetura, segurança e contratos do Lyra Upgrade. A ISO NVIDIA
+  dedicada foi cancelada: existe somente uma ISO Desktop.
+- **Alpha 6 — backend e integração:** publicar e qualificar os RPMs de i18n e
+  NVIDIA; implementar core, preflight, plano, estado durável, serviço
+  privilegiado e update dentro da mesma release.
+- **Alpha 7 — experiência e recuperação:** entregar interface Tauri,
+  reconexão ao serviço, verificação pós-boot, recuperação e rollback.
+- **Alpha 8 — upgrade e gate:** validar upgrade controlado entre releases e
+  automatizar update, reboot e rollback. Nenhuma feature entra depois de
+  06/10.
 
 ## Política do Lyra OS Server 1.0 “Delos”
 
