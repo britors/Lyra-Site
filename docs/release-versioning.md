@@ -35,10 +35,10 @@ versão 1.x mais recente.
 |---|---|---|---|
 | Alpha 3 | concluída | 11 ago 2026 | Fechamento do instalador e da publicação. |
 | Alpha 4 | snapshot antecipado | 14 ago 2026 | Infraestrutura de internacionalização, instalador em três idiomas e primeira onda de pacotes. |
-| Alpha 5 | 2 semanas | 14 ago 2026 – 28 ago 2026 | Estabilização dos bloqueadores herdados; i18n restante; NVIDIA pós-instalação pelo Vega; contratos do Lyra Upgrade. |
-| Alpha 6 | 2 semanas | 28 ago 2026 – 11 set 2026 | Qualificação de i18n/NVIDIA; core, preflight, estado durável e serviço privilegiado de update. |
-| Alpha 7 | 2 semanas | 11 set 2026 – 25 set 2026 | Interface, verificação pós-boot, recuperação e rollback. |
-| Alpha 8 | 2 semanas e 4 dias | 25 set 2026 – 13 out 2026 | Upgrade entre releases e gate automatizado até 06/10; semana de 06–13/10 exclusiva para estabilização. |
+| Alpha 5 | 2 semanas | 14 ago 2026 – 28 ago 2026 | Estabilização dos bloqueadores herdados; contratos do Lyra Upgrade; análise jurídica, referência BigLinux, qualificação upstream, UX e ADR do controle parental no Vega. |
+| Alpha 6 | 2 semanas | 28 ago 2026 – 11 set 2026 | Core, preflight, estado durável e serviço privilegiado do Lyra Upgrade; backend de políticas parentais. |
+| Alpha 7 | 2 semanas | 11 set 2026 – 25 set 2026 | Interface e upgrade entre releases; configuração parental e autorização de aplicativos no Vega. Toda implementação funcional encerra nesta etapa. |
+| Alpha 8 | 2 semanas e 4 dias | 25 set 2026 – 13 out 2026 | Gates automatizados de update, upgrade, rollback e ECA Digital; semana de 06–13/10 exclusiva para estabilização. Nenhuma feature nova. |
 | Beta 1 | 4 semanas | 13 out 2026 – 10 nov 2026 | **Feature freeze:** nenhuma feature, idioma, componente ou infraestrutura nova. Somente correções de bugs, regressões, segurança, desempenho e traduções existentes. |
 | Beta 2 | 4 semanas | 10 nov 2026 – 08 dez 2026 | Estabilidade, atualizações e regressões. Nenhuma feature nova. |
 | Beta 3 | 4 semanas | 08 dez 2026 – 05 jan 2027 | QA linguístico e correções finais. Corrigir catálogos e traduções existentes; não criar infraestrutura, traduzir novo componente nem adicionar idioma. |
@@ -54,24 +54,28 @@ próprios. Para os pacotes próprios cuja interface ainda não cobre os três,
 Alpha 6, Alpha 7 e Alpha 8 são obrigatórias e possuem gates próprios. Um P0/P1
 interrompe a ampliação de escopo da Alpha corrente e não é transferido por
 conveniência. Toda implementação funcional e infraestrutura de i18n fecha até
-06/10/2026; a semana de 06–13/10 recebe somente estabilização. Sem gate verde,
+25/09/2026; a Alpha 8 automatiza os gates e a semana de 06–13/10 recebe somente estabilização. Sem gate verde,
 a fase Alpha continua em vez de iniciar a Beta 1.
 
 ### Distribuição das Alphas restantes
 
-- **Alpha 5 — estabilização e fundações:** corrigir os bloqueadores do
-  instalador e do pipeline de release; concluir a segunda onda de i18n;
-  entregar a instalação opcional do NVIDIA pelo Vega com snapshot e rollback;
-  aprovar arquitetura, segurança e contratos do Lyra Upgrade. A ISO NVIDIA
-  dedicada foi cancelada: existe somente uma ISO Desktop.
-- **Alpha 6 — backend e integração:** publicar e qualificar os RPMs de i18n e
-  NVIDIA; implementar core, preflight, plano, estado durável, serviço
-  privilegiado e update dentro da mesma release.
-- **Alpha 7 — experiência e recuperação:** entregar interface Tauri,
-  reconexão ao serviço, verificação pós-boot, recuperação e rollback.
-- **Alpha 8 — upgrade e gate:** validar upgrade controlado entre releases e
-  automatizar update, reboot e rollback. Nenhuma feature entra depois de
-  06/10.
+- **Alpha 5 — estabilização e contratos:** corrigir primeiro os bloqueadores do
+  instalador e do pipeline de release; aprovar arquitetura, segurança e
+  contratos do Lyra Upgrade. Para o ECA Digital, concluir o enquadramento
+  jurídico, auditar a referência do BigLinux, qualificar a base upstream,
+  especificar a experiência no Vega e aprovar a ADR. A governança regulatória
+  LTS também recebe sua baseline. A ISO NVIDIA dedicada foi cancelada: existe
+  somente uma ISO Desktop e o fluxo pós-instalação pelo Vega já foi validado.
+- **Alpha 6 — backend:** implementar core, preflight, plano, estado durável,
+  serviço privilegiado e update seguro dentro da mesma release; implementar
+  separadamente o serviço autenticado e persistente de políticas parentais.
+- **Alpha 7 — produto completo:** entregar a interface e o upgrade controlado
+  entre releases; integrar no Vega a configuração parental e a autorização de
+  aplicativos sobre o backend já estável. Toda implementação funcional encerra
+  até 25/09.
+- **Alpha 8 — gate e estabilização:** automatizar update, upgrade, reboot,
+  rollback e a matriz de conformidade/regressão do ECA Digital. Nenhuma feature
+  nova entra nesta etapa; a semana de 06–13/10 é somente para estabilização.
 
 ## Política do Lyra OS Server 1.0 “Delos”
 
